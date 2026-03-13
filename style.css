@@ -1731,20 +1731,6 @@ nav {
     gap: 15px;
     text-align: center;
   }
-}
-/* Menu desktop */
-.nav-links {
-  display: flex;
-  gap: 20px;
-}
-
-/* Bouton hamburger caché en desktop */
-.menu-toggle {
-  display: none;
-  font-size: 24px;
-  cursor: pointer;
-  color: white;
-}
 
 /* Menu mobile */
 @media (max-width: 768px) {
@@ -1823,42 +1809,6 @@ nav {
     margin: 10px 0;
   }
 }
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: flex;
-    position: fixed; /* reste visible en haut */
-    top: 15px;
-    right: 15px;
-    z-index: 1001; /* au-dessus du menu */
-  }
-
-  .nav-links {
-    position: fixed;
-    top: 0;
-    right: -250px; /* caché hors écran */
-    width: 250px;
-    height: 100%;
-    background: #111;
-    flex-direction: column;
-    padding: 60px 20px;
-    transition: right 0.3s ease-in-out;
-    z-index: 1000; /* au-dessus du contenu */
-  }
-
-  nav.active .nav-links {
-    right: 0; /* glisse depuis la droite */
-  }
-
-  .nav-links li {
-    margin: 15px 0;
-  }
-
-  .nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-  }
-}
 /* Bouton hamburger */
 .menu-toggle {
   display: none;
@@ -1867,10 +1817,10 @@ nav {
   width: 30px;
   height: 22px;
   cursor: pointer;
-  position: fixed;   /* fixé en haut de l’écran */
+  position: fixed;   /* fixé en haut */
   top: 15px;
   right: 15px;
-  z-index: 2001;     /* au-dessus de tout */
+  z-index: 2001;     /* toujours au-dessus */
 }
 
 .menu-toggle span {
@@ -1883,6 +1833,10 @@ nav {
 
 /* Menu mobile */
 @media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
   .nav-links {
     position: fixed;
     top: 0;
@@ -1898,15 +1852,5 @@ nav {
 
   nav.active .nav-links {
     right: 0;        /* glisse depuis la droite */
-  }
-
-  .nav-links li {
-    margin: 15px 0;
-  }
-
-  .nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
   }
 }
