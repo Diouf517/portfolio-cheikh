@@ -1854,3 +1854,53 @@ nav {
     right: 0;        /* glisse depuis la droite */
   }
 }
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 2001;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+  }
+
+  .menu-toggle span {
+    display: block;
+    height: 4px;
+    background: white;
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100vh;          /* prend toute la hauteur de l’écran */
+    overflow-y: auto;       /* permet de scroller si trop de liens */
+    background: #111;
+    flex-direction: column;
+    padding: 60px 20px;
+    transition: right 0.3s ease-in-out;
+    z-index: 2000;
+  }
+
+  nav.active .nav-links {
+    right: 0;
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+  }
+
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+}
