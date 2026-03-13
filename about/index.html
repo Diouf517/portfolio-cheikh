@@ -8,17 +8,26 @@
 </head>
 <body id="about-page">
   <!-- Menu de navigation spécifique à À propos -->
-  <nav>
+<nav>
+  <!-- Bouton hamburger pour mobile -->
+  <div class="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
   <div class="nav-container">
     <ul class="nav-links">
-      <li><a href="/index.html" class="active">Accueil</a></li>
-      <li><a href="/about/index.html">À propos</a></li>
-      <li><a href="/skills/index.html">Compétences</a></li>
-      <li><a href="/projects/index.html">Projets</a></li>
-      <li><a href="/contact/index.html">Contact</a></li>
+      <li><a href="../index.html">Accueil</a></li>
+      <li><a href="index.html" class="active">À propos</a></li>
+      <li><a href="../skills/index.html">Compétences</a></li>
+      <li><a href="../projects/index.html">Projets</a></li>
+      <li><a href="../gallery/">Galerie</a></li>
+      <li><a href="../contact/index.html">Contact</a></li>
     </ul>
   </div>
 </nav>
+
 
   <!-- Contenu principal -->
   <main>
@@ -33,5 +42,15 @@ Mon approche allie créativité et rigueur technique pour donner vie à des iden
 
     </p>
   </main>
+  <!-- Script pour activer le menu mobile -->
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+      toggle.classList.toggle('open');
+    });
+  </script>
 </body>
 </html>
