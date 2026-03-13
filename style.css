@@ -1881,8 +1881,8 @@ nav {
     top: 0;
     right: -250px;
     width: 250px;
-    height: 100vh;          /* prend toute la hauteur de l’écran */
-    overflow-y: auto;       /* permet de scroller si trop de liens */
+    height: 100vh;       /* prend toute la hauteur de l’écran */
+    overflow-y: auto;    /* permet de scroller si trop de liens */
     background: #111;
     flex-direction: column;
     padding: 60px 20px;
