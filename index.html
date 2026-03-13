@@ -9,12 +9,20 @@
 <body id="home-page">
   <!-- Menu de navigation -->
   <nav>
+    <!-- Bouton hamburger -->
+    <div class="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
     <div class="nav-container">
       <ul class="nav-links">
         <li><a href="index.html" class="active">Accueil</a></li>
         <li><a href="about/index.html">À propos</a></li>
         <li><a href="skills/index.html">Compétences</a></li>
         <li><a href="projects/index.html">Projets</a></li>
+        <li><a href="gallery/">Galerie</a></li>
         <li><a href="contact/index.html">Contact</a></li>
       </ul>
     </div>
@@ -31,5 +39,16 @@
       <a href="contact/index.html" class="cta-button secondary">Me contacter</a>
     </div>
   </header>
+
+  <!-- Script pour activer le menu mobile -->
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+      toggle.classList.toggle('open');
+    });
+  </script>
 </body>
 </html>
