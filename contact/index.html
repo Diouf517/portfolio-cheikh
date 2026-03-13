@@ -42,27 +42,25 @@
   </style>
 </head>
 <body id="contact-page">
-  <!-- Menu de navigation spécifique à À propos -->
-<nav>
-  <!-- Bouton hamburger pour mobile -->
-  <div class="menu-toggle">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
+  <!-- Menu de navigation -->
+  <nav>
+    <!-- Bouton hamburger pour mobile -->
+    <div class="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
 
-  <div class="nav-container">
-    <ul class="nav-links">
-      <li><a href="../index.html">Accueil</a></li>
-      <li><a href="index.html" class="active">À propos</a></li>
-      <li><a href="../skills/index.html">Compétences</a></li>
-      <li><a href="../projects/index.html">Projets</a></li>
-      <li><a href="../gallery/">Galerie</a></li>
-      <li><a href="../contact/index.html">Contact</a></li>
-    </ul>
-  </div>
-</nav>
-
+    <div class="nav-container">
+      <ul class="nav-links">
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="../about/index.html">À propos</a></li>
+        <li><a href="../skills/index.html">Compétences</a></li>
+        <li><a href="../projects/index.html">Projets</a></li>
+        <li><a href="index.html" class="active">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
   <!-- Section Contact -->
   <main>
@@ -93,50 +91,19 @@
     <div class="social-icons">
       <a href="https://wa.me/221784383911" target="_blank"><i class="fab fa-whatsapp"></i></a>
       <a href="https://instagram.com/cheikh_maestro_" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="mailto:cheikhmaestro8@gmail.com"><i class="fas fa-envelope"></i></a>
-      <a href="https://www.linkedin.com/in/maestro8" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:cheikhmaestro8@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
     </div>
   </footer>
 
+  <!-- Script pour activer le menu mobile -->
+  <script src="../script.js"></script>
+
+  <!-- Script pour afficher le message de remerciement -->
   <script>
     function showThankYou(event) {
-      event.preventDefault(); 
-      const form = event.target;
-
-      fetch(form.action, {
-        method: form.method,
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
-      }).then(response => {
-        if (response.ok) {
-          form.reset();
-          const msg = document.getElementById('thankYouMessage');
-          msg.classList.add('show');
-
-          setTimeout(() => {
-            msg.classList.add('hide');
-            setTimeout(() => {
-              msg.classList.remove('show', 'hide');
-              msg.style.display = 'none';
-            }, 1000);
-          }, 5000);
-        } else {
-          alert("Une erreur est survenue, veuillez réessayer.");
-        }
-      }).catch(() => {
-        alert("Impossible d'envoyer le message pour le moment.");
-      });
+      event.preventDefault();
+      document.getElementById("thankYouMessage").style.display = "block";
     }
-  </script>
-  <!-- Script pour activer le menu mobile -->
-  <script>
-    const toggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('nav');
-
-    toggle.addEventListener('click', () => {
-      nav.classList.toggle('active');
-      toggle.classList.toggle('open');
-    });
   </script>
 </body>
 </html>

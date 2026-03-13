@@ -5,30 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projets - Portfolio Cheikh</title>
   <link rel="stylesheet" href="../style.css">
+  <!-- Font Awesome pour les icônes -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body id="projects-page">
-  <!-- Menu de navigation spécifique à À propos -->
-<nav>
-  <!-- Bouton hamburger pour mobile -->
-  <div class="menu-toggle">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
+  <!-- Menu de navigation -->
+  <nav>
+    <!-- Bouton hamburger pour mobile -->
+    <div class="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
 
-  <div class="nav-container">
-    <ul class="nav-links">
-      <li><a href="../index.html">Accueil</a></li>
-      <li><a href="index.html" class="active">À propos</a></li>
-      <li><a href="../skills/index.html">Compétences</a></li>
-      <li><a href="../projects/index.html">Projets</a></li>
-      <li><a href="../gallery/">Galerie</a></li>
-      <li><a href="../contact/index.html">Contact</a></li>
-    </ul>
-  </div>
-</nav>
-
+    <div class="nav-container">
+      <ul class="nav-links">
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="../about/index.html">À propos</a></li>
+        <li><a href="../skills/index.html">Compétences</a></li>
+        <li><a href="index.html" class="active">Projets</a></li>
+        <li><a href="../gallery/">Galerie</a></li>
+        <li><a href="../contact/index.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
   <!-- Contenu principal -->
   <main>
@@ -53,21 +53,13 @@
 
         <!-- Bouton qui redirige vers la page Galerie -->
         <a href="../gallery/" class="project-link">
-  <i class="fas fa-eye"></i> Voir mes logos et affiches
-</a>
-
+          <i class="fas fa-eye"></i> Voir mes logos et affiches
+        </a>
       </div>
     </section>
   </main>
-  <!-- Script pour activer le menu mobile -->
-  <script>
-    const toggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('nav');
 
-    toggle.addEventListener('click', () => {
-      nav.classList.toggle('active');
-      toggle.classList.toggle('open');
-    });
-  </script>
+  <!-- Script pour activer le menu mobile -->
+  <script src="../script.js"></script>
 </body>
 </html>

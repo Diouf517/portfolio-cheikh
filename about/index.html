@@ -5,52 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>À propos - Portfolio Cheikh</title>
   <link rel="stylesheet" href="../style.css">
+  <!-- Import des icônes Font Awesome si besoin -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body id="about-page">
-  <!-- Menu de navigation spécifique à À propos -->
-<nav>
-  <!-- Bouton hamburger pour mobile -->
-  <div class="menu-toggle">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
+  <!-- Menu de navigation -->
+  <nav>
+    <!-- Bouton hamburger pour mobile -->
+    <div class="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
 
-  <div class="nav-container">
-    <ul class="nav-links">
-      <li><a href="../index.html">Accueil</a></li>
-      <li><a href="index.html" class="active">À propos</a></li>
-      <li><a href="../skills/index.html">Compétences</a></li>
-      <li><a href="../projects/index.html">Projets</a></li>
-      <li><a href="../gallery/">Galerie</a></li>
-      <li><a href="../contact/index.html">Contact</a></li>
-    </ul>
-  </div>
-</nav>
-
+    <div class="nav-container">
+      <ul class="nav-links">
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="index.html" class="active">À propos</a></li>
+        <li><a href="../skills/index.html">Compétences</a></li>
+        <li><a href="../projects/index.html">Projets</a></li>
+        <li><a href="../gallery/">Galerie</a></li>
+        <li><a href="../contact/index.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
   <!-- Contenu principal -->
   <main>
     <h1>À propos</h1>
     <img src="../assets/avatar.png" alt="Photo de Cheikh" class="avatar">
     <p>
-      <p>
-Passionné par la création visuelle et le design numérique, j’aime transformer des idées en projets concrets et élégants.  
-Mon approche allie créativité et rigueur technique pour donner vie à des identités visuelles modernes et cohérentes.  
-À travers ce portfolio, je partage mon parcours et mes réalisations, reflet de mon ambition : concevoir des expériences digitales claires, esthétiques et impactantes.
-</p>
-
+      Passionné par la création visuelle et le design numérique, j’aime transformer des idées en projets concrets et élégants.  
+      Mon approche allie créativité et rigueur technique pour donner vie à des identités visuelles modernes et cohérentes.  
+      À travers ce portfolio, je partage mon parcours et mes réalisations, reflet de mon ambition : concevoir des expériences digitales claires, esthétiques et impactantes.
     </p>
   </main>
-  <!-- Script pour activer le menu mobile -->
-  <script>
-    const toggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('nav');
 
-    toggle.addEventListener('click', () => {
-      nav.classList.toggle('active');
-      toggle.classList.toggle('open');
-    });
-  </script>
+  <!-- Script pour activer le menu mobile -->
+  <script src="../script.js"></script>
 </body>
 </html>
