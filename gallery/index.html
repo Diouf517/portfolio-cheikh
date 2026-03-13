@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galerie - Portfolio Cheikh</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body id="gallery-page">
+  <!-- Menu de navigation -->
+  <nav>
+  <div class="nav-container">
+    <ul class="nav-links">
+      <li><a href="/index.html" class="active">Accueil</a></li>
+      <li><a href="/about/index.html">À propos</a></li>
+      <li><a href="/skills/index.html">Compétences</a></li>
+      <li><a href="/projects/index.html">Projets</a></li>
+      <li><a href="/contact/index.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+  <!-- Galerie en grille -->
+  <main>
+    <h1>Mes Logos et Affiches</h1>
+<p class="intro-text">
+  <strong>Découvrez mes créations graphiques réalisées pour divers projets professionnels et personnels.</strong>
+</p>
+
+    <div id="lightbox-gallery" class="gallery">
+  <div class="item"><img src="../assets/logo-entreprise.png" loading="lazy"></div>
+  <div class="item"><img src="../assets/affiche-publicitaire.png" loading="lazy"></div>
+  <div class="item"><img src="../assets/image3.png" loading="lazy"></div>
+  <div class="item"><img src="../assets/image4.png" loading="lazy"></div>
+  <div class="item"><img src="../assets/image5.png" loading="lazy"></div>
+  <div class="item"><img src="../assets/image6.png" loading="lazy"></div>
+  <div class="item"><img src="../assets/image7.png" loading="lazy"></div>
+  <div class="item"><img src="../assets/image8.png" loading="lazy"></div>
+  <div class="item"><img src="../assets/image9.png" loading="lazy"></div>
+  <div class="item"><img src="../assets/image10.png" loading="lazy"></div>
+  <div class="item"><img src="../assets/image11.png" loading="lazy"></div>
+  <div class="item"><img src="../assets/image12.png" loading="lazy"></div>
+  <div class="item"><img src="../assets/image13.png" loading="lazy"></div>
+  <div class="item"><img src="../assets/image14.png" loading="lazy"></div>
+  <div class="item"><img src="../assets/image15.png" loading="lazy"></div>
+  <div class="item"><img src="../assets/image16.png" loading="lazy"></div>
+  <div class="item"><img src="../assets/image17.png" loading="lazy"></div>
+  <div class="item"><img src="../assets/image18.png" loading="lazy"></div>
+  <div class="item"><img src="../assets/image19.png" loading="lazy"></div>
+  <div class="item"><img src="../assets/image20.png" loading="lazy"></div>
+  <div class="item"><img src="../assets/image21.png" loading="lazy"></div>
+  <div class="item"><img src="../assets/image22.png" loading="lazy"></div>
+  <div class="item"><img src="../assets/image23.png" loading="lazy"></div>
+  <div class="item"><img src="../assets/image24.png" loading="lazy"></div>
+  <div class="item"><img src="../assets/image25.png" loading="lazy"></div>
+  <div class="item"><img src="../assets/image26.png" loading="lazy"></div>
+  <div class="item"><img src="../assets/image27.png" loading="lazy"></div>
+  <div class="item"><img src="../assets/image28.png" loading="lazy"></div>
+  <div class="item"><img src="../assets/image29.png" loading="lazy"></div>
+</div>
+
+  </main>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <span class="prev">&#10094;</span>
+    <span class="next">&#10095;</span>
+    <img class="lightbox-content" id="lightbox-img">
+    <div id="caption"></div>
+  </div>
+
+  <script>
+    const galleryImages = document.querySelectorAll("#lightbox-gallery img");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const caption = document.getElementById("caption");
+    const closeBtn = document.querySelector(".close");
+    const prevBtn = document.querySelector(".prev");
+    const nextBtn = document.querySelector(".next");
+
+    let currentIndex = 0;
+
+    // Cliquer sur une image
+    galleryImages.forEach((img, index) => {
+      img.addEventListener("click", () => {
+        currentIndex = index;
+        lightbox.style.display = "block";
+        lightbox.classList.add("show-image");
+        lightboxImg.style.display = "block";
+        prevBtn.style.display = "block";
+        nextBtn.style.display = "block";
+        lightboxImg.src = img.src;
+        caption.innerHTML = img.alt;
+      });
+    });
+
+    // Navigation
+    prevBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+      lightboxImg.src = galleryImages[currentIndex].src;
+      caption.innerHTML = galleryImages[currentIndex].alt;
+    });
+
+    nextBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % galleryImages.length;
+      lightboxImg.src = galleryImages[currentIndex].src;
+      caption.innerHTML = galleryImages[currentIndex].alt;
+    });
+
+    // Fermer
+    closeBtn.addEventListener("click", () => {
+      lightbox.style.display = "none";
+      lightbox.classList.remove("show-image");
+    });
+
+    window.addEventListener("click", (e) => {
+      if (e.target === lightbox) {
+        lightbox.style.display = "none";
+        lightbox.classList.remove("show-image");
+      }
+    });
+
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        lightbox.style.display = "none";
+        lightbox.classList.remove("show-image");
+      }
+    });
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,1734 @@
+/* Style global */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f9;
+  color: #333;
+}
+
+/* Bannière accueil */
+.hero {
+  position: relative;
+  background: url("assets/banner.png") no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+  height: 100vh; /* couvre tout l’écran */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 40px; /* recule le contenu */
+}
+
+/* Overlay dégradé léger */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.25),   /* léger assombrissement en bas */
+    rgba(0, 0, 0, 0.05)    /* quasi transparent en haut */
+  );
+  z-index: 1;
+}
+
+/* Contenu au-dessus de l’overlay */
+.hero h1, .hero p, .hero nav, .hero .logo, .cta-btn {
+  position: relative;
+  z-index: 2;
+}
+
+/* Logo */
+.hero .logo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+/* Bouton CTA */
+.cta-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: linear-gradient(45deg, #ffcc00, #ffaa00);
+  color: #000;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  transform: scale(1.08);
+  color: #fff;
+}
+
+/* Menu */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin-top: 30px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* ✅ Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+main {
+  padding: 40px;
+}
+
+main h1 {
+  color: #004080;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  width: 150px;
+  border-radius: 50%;
+  border: 3px solid #004080;
+  margin: 20px 0;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #e6f0ff, #ffffff); /* bleu très clair vers blanc */
+  color: #333;
+}
+
+main {
+  padding: 40px;
+  max-width: 800px;
+  margin: auto;
+  background: rgba(255,255,255,0.9); /* bloc semi-transparent */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+/* Fond spécifique à la page À propos */
+#about-page {
+  background: linear-gradient(to bottom, #e6f0ff, #cce0ff); /* dégradé bleu clair */
+  color: #333;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+/* Menu spécifique à À propos */
+#about-page nav ul {
+  background: #004080; /* barre bleu foncé */
+  padding: 15px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 0;
+}
+
+#about-page nav ul li a {
+  color: #fff; /* texte blanc sur fond bleu */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#about-page nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Contenu principal */
+#about-page main {
+  padding: 40px;
+  max-width: 800px;
+  margin: auto;
+  background: rgba(255,255,255,0.9); /* bloc semi-transparent */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#about-page main h1 {
+  color: #004080;
+  margin-bottom: 20px;
+}
+
+#about-page .avatar {
+  width: 150px;
+  border-radius: 50%;
+  border: 3px solid #004080;
+  margin: 20px 0;
+}
+/* Style spécifique à la page À propos */
+#about-page main {
+  padding: 40px;
+  max-width: 800px;
+  margin: auto;
+  background: rgba(255,255,255,0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.8; /* espacement entre les lignes */
+  font-size: 16px;
+  color: #333;
+}
+
+/* Titre principal */
+#about-page main h1 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #004080;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 1px; /* espace entre les lettres */
+}
+
+/* Texte du paragraphe */
+#about-page main p {
+  font-size: 18px;
+  color: #444;
+  text-align: justify; /* alignement justifié pour un rendu pro */
+  margin-top: 20px;
+}
+
+/* Style de la photo */
+#about-page .avatar {
+  display: block;
+  margin: 0 auto 20px auto;
+  width: 160px;
+  border-radius: 50%;
+  border: 4px solid #004080;
+}
+/* Style général pour la page À propos */
+#about-page main {
+  padding: 40px;
+  max-width: 800px;
+  margin: auto;
+  background: rgba(255,255,255,0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-family: "Poppins", "Segoe UI", Arial, sans-serif; /* police moderne */
+  line-height: 1.8;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Titre principal */
+#about-page main h1 {
+  font-size: 30px;
+  font-weight: 600; /* semi-bold, pas trop gras */
+  color: #004080;
+  text-align: center;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+/* Texte du paragraphe */
+#about-page main p {
+  font-size: 18px;
+  color: #444;
+  text-align: justify;
+  margin-top: 20px;
+  font-weight: 400; /* normal */
+}
+
+/* Photo */
+#about-page .avatar {
+  display: block;
+  margin: 0 auto 20px auto;
+  width: 150px;
+  border-radius: 50%;
+  border: 3px solid #004080;
+}
+
+/* ✅ Adaptation mobile */
+@media (max-width: 600px) {
+  #about-page main {
+    padding: 20px;
+    font-size: 14px;
+  }
+
+  #about-page main h1 {
+    font-size: 22px;
+  }
+
+  #about-page main p {
+    font-size: 16px;
+  }
+
+  #about-page .avatar {
+    width: 110px;
+    border-width: 2px;
+  }
+}
+/* Style global */
+body {
+  margin: 0;
+  font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 15px;
+  margin: 0;
+  justify-content: center;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ✅ Adaptation mobile */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column; /* menu vertical sur mobile */
+    align-items: center;
+    gap: 10px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+
+  main {
+    padding: 20px;
+  }
+
+  main h1 {
+    font-size: 24px;
+  }
+
+  main p {
+    font-size: 16px;
+    text-align: left; /* plus lisible sur petit écran */
+  }
+
+  .avatar {
+    width: 120px;
+    border-width: 3px;
+  }
+}
+/* Fond spécifique */
+#skills-page {
+  background: linear-gradient(to bottom, #fff, #e6f0ff);
+  color: #333;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+/* Menu */
+#skills-page nav ul {
+  background: #004080;
+  padding: 15px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 0;
+}
+
+#skills-page nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Contenu principal */
+#skills-page main {
+  padding: 40px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+#skills-page main h1 {
+  text-align: center;
+  color: #004080;
+  margin-bottom: 40px;
+}
+
+/* Grille des compétences */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.skill-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+}
+
+.skill-card h2 {
+  color: #004080;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.skill-card p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* ✅ Adaptation mobile */
+@media (max-width: 600px) {
+  #skills-page main {
+    padding: 20px;
+  }
+
+  .skill-card h2 {
+    font-size: 18px;
+  }
+
+  .skill-card p {
+    font-size: 14px;
+  }
+}
+/* Effet interactif sur les cartes */
+.skill-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer; /* indique que c’est cliquable */
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+/* ✅ Effet tactile sur mobile */
+.skill-card:active {
+  transform: scale(0.97); /* léger zoom arrière quand on appuie */
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+/* Effet interactif sur les cartes */
+.skill-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  cursor: pointer;
+}
+
+/* Survol desktop */
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+  background-color: #f0f8ff; /* bleu très clair */
+}
+
+/* Appui mobile */
+.skill-card:active {
+  transform: scale(0.97);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  background-color: #e6f2ff; /* bleu clair */
+}
+.skill-level {
+  background: #e6f0ff;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.skill-level div {
+  height: 8px;
+  background: #004080;
+  width: 80%; /* niveau en pourcentage */
+}
+/* Phrase d'accroche */
+#skills-page .intro-text {
+  text-align: center;
+  font-size: 20px;          /* un peu plus grande */
+  color: #333;              /* gris foncé, plus sérieux */
+  margin-bottom: 35px;
+  font-family: "Poppins", "Roboto", "Segoe UI", Arial, sans-serif; /* police moderne */
+  font-weight: 300;         /* léger, raffiné */
+  letter-spacing: 0.5px;    /* espace subtil entre les lettres */
+}
+/* Barres de progression */
+.progress-bar {
+  background: #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 12px;
+}
+
+.progress-bar div {
+  height: 20px;
+  background: #004080;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  transition: width 0.4s ease;
+}
+/* Barres de progression */
+.progress-bar {
+  background: #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 12px;
+}
+
+.progress-bar div {
+  height: 20px;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  transition: width 0.4s ease;
+  font-weight: 600;
+}
+
+/* Couleurs par compétence */
+.skill-card:nth-child(1) .progress-bar div {
+  background: #8e44ad; /* violet pour Infographie */
+}
+
+.skill-card:nth-child(2) .progress-bar div {
+  background: #3498db; /* bleu pour Web Design */
+}
+
+.skill-card:nth-child(3) .progress-bar div {
+  background: #27ae60; /* vert pour Maintenance */
+}
+
+.skill-card:nth-child(4) .progress-bar div {
+  background: #f39c12; /* orange pour Déploiement */
+}
+
+.skill-card:nth-child(5) .progress-bar div {
+  background: #e74c3c; /* rouge pour Communication */
+}
+.progress-bar {
+  background: #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 12px;
+}
+
+.progress-bar div {
+  height: 20px;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  width: 0; /* départ à 0% */
+  animation: fillBar 1.5s ease forwards;
+}
+
+/* Animation qui utilise la variable --value */
+@keyframes fillBar {
+  from { width: 0; }
+  to { width: var(--value); }
+}
+
+/* Couleurs par compétence */
+.skill-card:nth-child(1) .progress-bar div { background: #8e44ad; } /* violet */
+.skill-card:nth-child(2) .progress-bar div { background: #3498db; } /* bleu */
+.skill-card:nth-child(3) .progress-bar div { background: #27ae60; } /* vert */
+.skill-card:nth-child(4) .progress-bar div { background: #f39c12; } /* orange */
+.skill-card:nth-child(5) .progress-bar div { background: #e74c3c; } /* rouge */
+.progress-bar {
+  background: #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 12px;
+}
+
+.progress-bar div {
+  height: 20px;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  width: 0; /* départ à 0% */
+  animation: fillBar 1.5s ease forwards;
+}
+
+/* Animation qui utilise la variable --value */
+@keyframes fillBar {
+  from { width: 0; }
+  to { width: var(--value); }
+}
+
+/* Couleurs par compétence */
+.skill-card:nth-child(1) .progress-bar div { background: #8e44ad; } /* violet Infographie */
+.skill-card:nth-child(2) .progress-bar div { background: #3498db; } /* bleu Web Design */
+.skill-card:nth-child(3) .progress-bar div { background: #27ae60; } /* vert Maintenance */
+.skill-card:nth-child(4) .progress-bar div { background: #f39c12; } /* orange Community Manager */
+.skill-card:nth-child(5) .progress-bar div { background: #e74c3c; } /* rouge Communication & Branding */
+.skill-card:nth-child(6) .progress-bar div { background: #1abc9c; } /* turquoise SEO */
+.skill-card:nth-child(7) .progress-bar div { background: #9b59b6; } /* violet Publicité Digitale */
+.skill-card:nth-child(8) .progress-bar div { background: #2ecc71; } /* vert Analyse de Données */
+.skill-card:nth-child(9) .progress-bar div { background: #e67e22; } /* orange Email Marketing */
+.skill-card:nth-child(10) .progress-bar div { background: #34495e; } /* gris foncé Stratégie de Contenu */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 16px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.project-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 14px;
+  background: #3498db;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.project-link:hover {
+  background: #21618c;
+}
+.project-card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.project-card {
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.project-card h2 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.project-card i {
+  margin-right: 8px;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Fonds colorés par projet */
+.project-oulysh { background: #3498db; }      /* bleu Oulysh Business */
+.project-campagne { background: #e67e22; }   /* orange Campagne Digitale */
+.project-identite { background: #8e44ad; }   /* violet Identité Visuelle */
+
+.project-link {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 14px;
+  background: #fff;
+  color: #3498db;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.project-link:hover {
+  background: #21618c;
+  color: #fff;
+}
+/* Barre de navigation spécifique à la page Projets */
+#projects-page nav {
+  background: #004080;
+  padding: 12px 0;
+}
+
+#projects-page nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+#projects-page nav ul li {
+  margin: 0 15px;
+}
+
+#projects-page nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+#projects-page nav ul li a:hover {
+  color: #f1c40f; /* jaune doré au survol */
+}
+/* Barre de navigation spécifique aux pages internes */
+#about-page nav,
+#skills-page nav,
+#projects-page nav,
+#contact-page nav {
+  background: #004080; /* bleu foncé uniforme */
+  padding: 12px 0;
+}
+
+/* Style commun pour la liste */
+#about-page nav ul,
+#skills-page nav ul,
+#projects-page nav ul,
+#contact-page nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap; /* permet de s’adapter sur mobile */
+}
+
+#about-page nav ul li,
+#skills-page nav ul li,
+#projects-page nav ul li,
+#contact-page nav ul li {
+  margin: 0 15px;
+}
+
+#about-page nav ul li a,
+#skills-page nav ul li a,
+#projects-page nav ul li a,
+#contact-page nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+#about-page nav ul li a:hover,
+#skills-page nav ul li a:hover,
+#projects-page nav ul li a:hover,
+#contact-page nav ul li a:hover {
+  color: #f1c40f; /* jaune doré au survol */
+}
+
+/* Adaptation mobile */
+@media (max-width: 768px) {
+  #about-page nav ul,
+  #skills-page nav ul,
+  #projects-page nav ul,
+  #contact-page nav ul {
+    flex-direction: column; /* menu vertical sur mobile */
+    align-items: center;
+  }
+
+  #about-page nav ul li,
+  #skills-page nav ul li,
+  #projects-page nav ul li,
+  #contact-page nav ul li {
+    margin: 10px 0;
+  }
+}
+/* Barre de navigation interne */
+#about-page nav,
+#skills-page nav,
+#projects-page nav,
+#contact-page nav {
+  background: #004080;
+  padding: 12px 0;
+  position: relative;
+}
+
+/* Liste horizontale par défaut */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #f1c40f;
+}
+
+/* Bouton burger caché sur desktop */
+.menu-toggle {
+  display: none;
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Adaptation mobile */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    display: none; /* caché par défaut */
+    background: #004080;
+    padding: 10px 0;
+  }
+
+  nav ul.show {
+    display: flex; /* affiché quand on clique */
+  }
+
+  .menu-toggle {
+    display: block; /* bouton burger visible */
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+}
+/* Barre de navigation pour toutes les pages */
+#home-page nav,
+#about-page nav,
+#skills-page nav,
+#projects-page nav,
+#contact-page nav {
+  background: #004080; /* bleu foncé */
+  padding: 12px 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Liens horizontaux par défaut */
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #f1c40f;
+}
+
+/* Bouton burger caché sur desktop */
+.burger {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Responsive mobile */
+@media (max-width: 768px) {
+  .burger {
+    display: block; /* bouton visible sur mobile */
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #004080;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-height: 0; /* caché par défaut */
+    overflow: hidden;
+    transition: max-height 0.4s ease; /* animation slide-down */
+  }
+
+  .nav-links.show {
+    max-height: 300px; /* affiché avec animation */
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+  }
+}
+/* Galerie */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.9);
+  overflow-y: auto;
+  animation: fadeIn 0.4s ease;
+  padding: 40px 20px;
+}
+
+/* Image agrandie centrée */
+.lightbox-content {
+  display: none;
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  z-index: 10000;
+}
+
+/* Quand une image est ouverte, la grille reste visible mais sombre */
+.lightbox.show-image #lightbox-gallery {
+  opacity: 0.3;
+  filter: blur(2px); /* optionnel : flou léger */
+  pointer-events: none;
+}
+
+/* Croix bien visible en haut à droite */
+.close {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10001;
+}
+
+/* Flèches navigation */
+.prev, .next {
+  display: none;
+  position: fixed;
+  top: 50%;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+  z-index: 10001;
+}
+
+.prev { left: 40px; transform: translateY(-50%); }
+.next { right: 40px; transform: translateY(-50%); }
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+/* Barre de navigation interne */
+#about-page nav,
+#skills-page nav,
+#projects-page nav,
+#contact-page nav,
+#gallery-page nav {
+  background: #004080; /* bleu foncé uniforme */
+  padding: 12px 0;
+  position: relative;
+}
+
+/* Liste horizontale par défaut */
+#about-page nav ul,
+#skills-page nav ul,
+#projects-page nav ul,
+#contact-page nav ul,
+#gallery-page nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap; /* permet de s’adapter sur mobile */
+}
+
+#about-page nav ul li a,
+#skills-page nav ul li a,
+#projects-page nav ul li a,
+#contact-page nav ul li a,
+#gallery-page nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+#about-page nav ul li a:hover,
+#skills-page nav ul li a:hover,
+#projects-page nav ul li a:hover,
+#contact-page nav ul li a:hover,
+#gallery-page nav ul li a:hover {
+  color: #f1c40f; /* jaune doré au survol */
+}
+
+/* Adaptation mobile */
+@media (max-width: 768px) {
+  #about-page nav ul,
+  #skills-page nav ul,
+  #projects-page nav ul,
+  #contact-page nav ul,
+  #gallery-page nav ul {
+    flex-direction: column; /* menu vertical sur mobile */
+    align-items: center;
+  }
+
+  #about-page nav ul li,
+  #skills-page nav ul li,
+  #projects-page nav ul li,
+  #contact-page nav ul li,
+  #gallery-page nav ul li {
+    margin: 10px 0;
+  }
+}
+#gallery-page h1 {
+  text-align: center;
+  font-size: 2.2em;
+  margin-bottom: 10px;
+  color: #004080;
+}
+
+#gallery-page .intro-text {
+  text-align: center;
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  color: #555;
+}
+#lightbox-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+#lightbox-gallery .item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+#lightbox-gallery .item img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.lightbox-content {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+#gallery-page h1 {
+  text-align: center;
+  font-size: 2.4em;
+  margin-bottom: 10px;
+  color: #004080;
+}
+
+#gallery-page .intro-text {
+  text-align: center;
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  color: #555;
+}
+/* Grille de la galerie */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+/* Images dans la galerie */
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Adaptation mobile */
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    grid-template-columns: 1fr; /* une seule colonne sur petit écran */
+  }
+}
+/* Section Contact */
+#contact-page main {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+#contact-page h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+#contact-page .intro-text {
+  font-size: 1.1em;
+  margin-bottom: 25px;
+  color: #555;
+}
+
+/* Formulaire */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form label {
+  text-align: left;
+  font-weight: bold;
+  color: #444;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+  width: 100%;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #0078d7;
+  box-shadow: 0 0 6px rgba(0,120,215,0.3);
+  outline: none;
+}
+
+/* Bouton Envoyer */
+.contact-form button {
+  background: #0078d7;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+  background: #005fa3;
+  transform: scale(1.05);
+}
+
+/* Adaptation mobile */
+@media (max-width: 480px) {
+  #contact-page main {
+    margin: 30px 15px;
+    padding: 15px;
+  }
+
+  #contact-page h1 {
+    font-size: 1.6em;
+  }
+
+  .contact-form button {
+    font-size: 1em;
+    padding: 10px;
+  }
+}
+/* Section Contact */
+#contact-page main {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 30px;
+  background: #f9f9f9; /* fond clair */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* ombre douce */
+}
+
+#contact-page h1 {
+  font-size: 2.2em;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+#contact-page .intro-text {
+  font-size: 1.1em;
+  margin-bottom: 25px;
+  color: #555;
+}
+
+/* Formulaire */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-form label {
+  text-align: left;
+  font-weight: 600;
+  color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1em;
+  width: 100%;
+  background: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #0078d7;
+  box-shadow: 0 0 8px rgba(0,120,215,0.3);
+  outline: none;
+}
+
+/* Bouton Envoyer */
+.contact-form button {
+  background: linear-gradient(135deg, #0078d7, #005fa3);
+  color: #fff;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.contact-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,120,215,0.4);
+}
+
+/* Message de confirmation */
+.thank-you {
+  margin-top: 20px;
+  font-size: 1.1em;
+  color: #0078d7;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.thank-you.show {
+  opacity: 1;
+}
+
+.thank-you.hide {
+  opacity: 0;
+}
+
+/* Adaptation mobile */
+@media (max-width: 480px) {
+  #contact-page main {
+    margin: 30px 15px;
+    padding: 20px;
+  }
+
+  #contact-page h1 {
+    font-size: 1.8em;
+  }
+
+  .contact-form button {
+    font-size: 1em;
+    padding: 12px;
+  }
+}
+/* Section accueil */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #0078d7, #00b4d8); /* dégradé élégant */
+  color: #fff;
+}
+
+.hero .logo {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+.hero .avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  max-width: 600px;
+}
+/* Menu avec logo à gauche */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.nav-logo img {
+  height: 40px;
+}
+
+/* Menu liens */
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #0078d7;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: #005fa3;
+}
+
+/* Avatar ajusté */
+.hero .avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+  margin-bottom: 25px;
+  object-fit: cover;
+}
+/* Logo dans la section d’accueil */
+.hero-logo {
+  height: 120px; /* logo bien visible */
+  margin-bottom: 20px;
+}
+
+/* Avatar ajusté */
+.hero .avatar {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.35);
+  margin-bottom: 35px;
+  object-fit: cover;
+}
+/* Barre de navigation */
+nav {
+  background: #fff; /* fond blanc du menu */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 15px 40px;
+}
+
+/* Liens du menu */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333; /* texte gris foncé par défaut */
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #0078d7; /* bleu au survol */
+}
+
+.nav-links a.active {
+  color: #fff; /* texte blanc pour le lien actif */
+  font-weight: 700;
+  border: none; /* suppression du soulignement bleu */
+  background: none; /* pas de fond */
+}
+/* Bouton principal */
+.cta-button {
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff; /* texte blanc */
+  background: linear-gradient(135deg, #0078d7, #005a9e); /* dégradé bleu moderne */
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Effet au survol */
+.cta-button:hover {
+  background: linear-gradient(135deg, #005a9e, #004080);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+/* Section d’accueil */
+.hero {
+  position: relative; /* permet de gérer les couches */
+  text-align: center;
+  padding: 60px 20px;
+  z-index: 1; /* assure que le contenu est au-dessus */
+}
+
+/* Bouton principal */
+.cta-button {
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff; /* texte blanc */
+  background: linear-gradient(135deg, #0078d7, #005a9e); /* dégradé bleu moderne */
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  cursor: pointer; /* assure que la souris change */
+  z-index: 2; /* bouton au-dessus de tout */
+}
+
+/* Effet au survol */
+.cta-button:hover {
+  background: linear-gradient(135deg, #005a9e, #004080);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+.cta-button {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(0,120,215,0.6); }
+  70% { box-shadow: 0 0 0 15px rgba(0,120,215,0); }
+  100% { box-shadow: 0 0 0 0 rgba(0,120,215,0); }
+}
+/* Section d’accueil */
+.hero {
+  position: relative;   /* permet de gérer les couches */
+  text-align: center;
+  padding: 80px 20px;
+  z-index: 1;           /* assure que le contenu est au-dessus */
+}
+
+/* Avatar */
+.hero .avatar {
+  position: relative;   /* évite qu’il recouvre les boutons */
+  z-index: 1;
+}
+
+/* Boutons */
+.cta-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+  z-index: 2;           /* assure que les boutons sont au-dessus */
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #0078d7, #005a9e);
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  cursor: pointer;      /* assure que la souris change */
+}
+/* Conteneur du menu */
+.nav-container {
+  display: flex;
+  justify-content: center; /* centre horizontalement */
+  align-items: center;
+  width: 100%;
+}
+
+/* Liens du menu */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff; /* tous les liens en blanc */
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #0078d7; /* bleu au survol */
+}
+
+.nav-links a.active {
+  color: #fff;       /* lien actif reste blanc */
+  background: none;  /* pas de fond */
+  border: none;      /* pas de soulignement */
+}
+/* Conteneur du menu */
+.nav-container {
+  display: flex;
+  justify-content: center; /* centre horizontalement */
+  align-items: center;
+  width: 100%;
+}
+
+/* Liens du menu */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff; /* tous les liens en blanc */
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #0078d7; /* bleu au survol */
+}
+
+.nav-links a.active {
+  color: #fff;       /* lien actif reste blanc */
+  background: none;  /* pas de fond */
+  border: none;      /* pas de soulignement */
+}
+/* Conteneur du menu */
+.nav-container {
+  display: flex;
+  justify-content: center; /* centre horizontalement */
+  align-items: center;
+  width: 100%;
+}
+
+/* Liens du menu */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff; /* tous les liens en blanc */
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #0078d7; /* bleu au survol */
+}
+
+.nav-links a.active {
+  color: #fff;       /* lien actif reste blanc */
+  background: none;  /* pas de fond */
+  border: none;      /* pas de soulignement */
+}
+/* Conteneur du menu */
+.nav-container {
+  display: flex;
+  justify-content: center; /* centre horizontalement */
+  align-items: center;
+  width: 100%;
+}
+
+/* Liens du menu */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff; /* texte blanc */
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #0078d7; /* bleu au survol */
+}
+
+.nav-links a.active {
+  color: #fff; /* lien actif reste blanc */
+  background: none;
+  border: none;
+}
+
+/* ✅ Responsive mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column; /* menu vertical */
+    gap: 15px;
+    text-align: center;
+  }
+}
