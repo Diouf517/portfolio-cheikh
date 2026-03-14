@@ -10,14 +10,14 @@
   <!-- Menu de navigation -->
   <nav>
     <!-- Bouton hamburger -->
-    <div class="menu-toggle">
+    <div class="burger" id="menu-toggle">
       <span></span>
       <span></span>
       <span></span>
     </div>
 
     <div class="nav-container">
-      <ul class="nav-links">
+      <ul class="nav-links" id="menu">
         <li><a href="index.html" class="active">Accueil</a></li>
         <li><a href="about/index.html">À propos</a></li>
         <li><a href="skills/index.html">Compétences</a></li>
@@ -41,16 +41,25 @@
 
   <!-- Script pour activer le menu mobile -->
   <script>
-    const toggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('nav');
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelector('.nav-links');
 
-    toggle.addEventListener('click', () => {
-      nav.classList.toggle('active');
-      toggle.classList.toggle('open');
-    });
+    if (burger && navLinks) {
+      burger.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+        burger.classList.toggle('open');
+      });
+
+      const links = navLinks.querySelectorAll('a');
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('show');
+          burger.classList.remove('open');
+        });
+      });
+    }
   </script>
-  <link rel="stylesheet" href="style.css">
-<script src="script.js"></script>
 
+  <script src="script.js"></script>
 </body>
 </html>

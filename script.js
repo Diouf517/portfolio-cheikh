@@ -152,3 +152,18 @@
     });
   }
 </script>
+.nav-links {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #004080;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 3000;
+}
+
+.nav-links.show {
+  transform: translateY(0);
+}
