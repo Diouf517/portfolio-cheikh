@@ -1,5 +1,5 @@
 <script>
-  // Menu burger
+  // Menu burger (version avec id)
   const toggle = document.getElementById('menu-toggle');
   const menu = document.getElementById('menu');
 
@@ -67,18 +67,17 @@
 
   // Fermer
   closeBtn.addEventListener("click", () => {
-    lightbox.classList.remove("show-image"); // enlève le mode image
-    lightboxImg.style.display = "none";      // cache l’image agrandie
-    caption.innerHTML = "";                  // vide la légende
+    lightbox.classList.remove("show-image");
+    lightboxImg.style.display = "none";
+    caption.innerHTML = "";
     prevBtn.style.display = "none";
     nextBtn.style.display = "none";
-    // ⚠️ On ne ferme pas la lightbox ici, la grille reste visible
   });
 
-  // Fermer si clic en dehors de l’image
+  // Fermer si clic en dehors
   window.addEventListener("click", (e) => {
     if (e.target === lightbox) {
-      lightbox.style.display = "none";       // ferme complètement la lightbox
+      lightbox.style.display = "none";
       lightbox.classList.remove("show-image");
     }
   });
@@ -91,7 +90,6 @@
       caption.innerHTML = "";
       prevBtn.style.display = "none";
       nextBtn.style.display = "none";
-      // ⚠️ Ici aussi, on ne ferme pas la grille, juste l’image
     }
     if (e.key === "ArrowLeft" && lightbox.classList.contains("show-image")) {
       currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
@@ -104,50 +102,53 @@
       caption.innerHTML = galleryImages[currentIndex].alt;
     }
   });
-</script>
-const zoomInBtn = document.getElementById("zoom-in-btn");
-const zoomOutBtn = document.getElementById("zoom-out-btn");
-const downloadBtn = document.getElementById("download-btn");
 
-let zoomLevel = 1;
+  // Zoom et téléchargement
+  const zoomInBtn = document.getElementById("zoom-in-btn");
+  const zoomOutBtn = document.getElementById("zoom-out-btn");
+  const downloadBtn = document.getElementById("download-btn");
 
-// Quand on clique sur une image
-galleryImages.forEach((img, index) => {
-  img.addEventListener("click", () => {
-    currentIndex = index;
-    lightbox.style.display = "block";
-    lightboxImg.src = img.src;
-    caption.innerHTML = img.alt;
-    downloadBtn.href = img.src; // lien direct vers l’image
-    zoomLevel = 1;
-    lightboxImg.style.transform = "scale(1)";
+  let zoomLevel = 1;
+
+  galleryImages.forEach((img, index) => {
+    img.addEventListener("click", () => {
+      currentIndex = index;
+      lightbox.style.display = "block";
+      lightboxImg.src = img.src;
+      caption.innerHTML = img.alt;
+      downloadBtn.href = img.src;
+      zoomLevel = 1;
+      lightboxImg.style.transform = "scale(1)";
+    });
   });
-});
 
-// Zoom +
-zoomInBtn.addEventListener("click", () => {
-  zoomLevel += 0.2;
-  lightboxImg.style.transform = `scale(${zoomLevel})`;
-});
-
-// Zoom -
-zoomOutBtn.addEventListener("click", () => {
-  if (zoomLevel > 0.4) {
-    zoomLevel -= 0.2;
+  zoomInBtn.addEventListener("click", () => {
+    zoomLevel += 0.2;
     lightboxImg.style.transform = `scale(${zoomLevel})`;
-  }
-});
-<script>
-  const toggle = document.querySelector('.menu-toggle');
-  const nav = document.querySelector('nav');
-
-  toggle.addEventListener('click', () => {
-    nav.classList.toggle('active');
   });
-</script>
-const burger = document.querySelector('.burger');
-const navLinks = document.querySelector('.nav-links');
 
-burger.addEventListener('click', () => {
-  navLinks.classList.toggle('show');
-});
+  zoomOutBtn.addEventListener("click", () => {
+    if (zoomLevel > 0.4) {
+      zoomLevel -= 0.2;
+      lightboxImg.style.transform = `scale(${zoomLevel})`;
+    }
+  });
+
+  // ✅ Menu mobile plein écran
+  const burger = document.querySelector('.burger');
+  const navLinks = document.querySelector('.nav-links');
+
+  if (burger && navLinks) {
+    burger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+
+    // Fermer le menu quand on clique sur un lien
+    const links = navLinks.querySelectorAll('a');
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('show');
+      });
+    });
+  }
+</script>
