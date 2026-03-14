@@ -1873,46 +1873,32 @@ nav {
     right: 0;           /* glisse et couvre toute la partie droite */
   }
 }
-/* ✅ Menu mobile uniforme sur toutes les pages */
+/* ✅ Menu mobile plein écran */
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: flex;
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    z-index: 2001;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 22px;
-    cursor: pointer;
-  }
-
-  .menu-toggle span {
-    display: block;
-    height: 4px;
-    background: #fff;
-    border-radius: 2px;
-    transition: 0.3s;
+  .burger {
+    display: block; /* bouton visible sur mobile */
+    position: relative;
+    z-index: 3001; /* au-dessus du menu */
   }
 
   .nav-links {
     position: fixed;
     top: 0;
-    right: -100%;       /* caché hors écran */
-    width: 70%;         /* couvre 70% de la largeur (mets 100% si tu veux plein écran) */
-    height: 100vh;      /* prend toute la hauteur */
-    overflow-y: auto;   /* scroll si trop de liens */
-    background: #004080;
+    left: 0;
+    width: 100%;        /* couvre toute la largeur */
+    height: 100vh;      /* couvre toute la hauteur */
+    background: #004080; /* fond bleu foncé */
     flex-direction: column;
     align-items: center;
-    padding: 60px 20px;
-    transition: right 0.3s ease-in-out;
-    z-index: 2000;
+    justify-content: center;
+    gap: 25px;
+    transform: translateX(-100%); /* caché hors écran */
+    transition: transform 0.3s ease-in-out;
+    z-index: 3000; /* au-dessus de tout (avatar, textes, etc.) */
   }
 
-  nav.active .nav-links {
-    right: 0;           /* glisse et couvre la partie droite */
+  .nav-links.show {
+    transform: translateX(0); /* glisse et couvre tout l’écran */
   }
 
   .nav-links li {
@@ -1921,8 +1907,8 @@ nav {
 
   .nav-links a {
     color: #fff;
-    text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
+    text-decoration: none;
   }
 }
