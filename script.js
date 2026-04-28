@@ -1,20 +1,21 @@
-<script>
-  // Menu burger (version avec id)
-  const toggle = document.getElementById('menu-toggle');
-  const menu = document.getElementById('menu');
+const burger = document.querySelector('.burger');
+const navLinks = document.querySelector('.nav-links');
 
-  if (toggle && menu) {
-    toggle.addEventListener('click', () => {
-      menu.classList.toggle('show');
-    });
+if (burger && navLinks) {
+  burger.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
 
-    const links = document.querySelectorAll('.nav-links a');
-    links.forEach(link => {
-      link.addEventListener('click', () => {
-        menu.classList.remove('show');
-      });
+  // Fermer le menu quand on clique sur un lien
+  const links = navLinks.querySelectorAll('a');
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('show');
     });
-  }
+  });
+}
+
+
 
   // Lightbox
   const openBtn = document.getElementById("open-gallery");
