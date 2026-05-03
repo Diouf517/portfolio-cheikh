@@ -10,8 +10,23 @@
 </head>
 <body id="projects-page">
   <!-- Menu de navigation -->
-  <!-- Bouton hamburger pour mobile -->
+  <nav>
+    <div class="nav-container">
+
+      <!-- Bouton hamburger pour mobile -->
       <button class="burger">☰</button>
+
+      <!-- Liens de navigation -->
+      <ul class="nav-links">
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="index.html" class="active">À propos</a></li>
+        <li><a href="../skills/index.html">Compétences</a></li>
+        <li><a href="../projects/index.html">Projets</a></li>
+        <li><a href="../gallery/index.html">Galerie</a></li>
+        <li><a href="../contact/index.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
   <!-- Contenu principal -->
   <main>
     <h1>Mes Projets</h1>
@@ -42,9 +57,24 @@
   </main>
 
   <!-- Script pour activer le menu mobile -->
-  <script src="../script.js"></script>
-  <link rel="stylesheet" href="../style.css">
-<script src="../script.js"></script>
+  <script>
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelector('.nav-links');
 
+    if (burger && navLinks) {
+      burger.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+        burger.classList.toggle('open');
+      });
+
+      const links = navLinks.querySelectorAll('a');
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('show');
+          burger.classList.remove('open');
+        });
+      });
+    }
+  </script>
 </body>
 </html>

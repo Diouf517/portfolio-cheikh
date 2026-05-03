@@ -2052,3 +2052,47 @@ nav {
     margin: 15px 0;
   }
 }
+/* Bouton burger aligné à droite */
+.burger {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 4000;
+}
+
+/* Menu caché par défaut (hors écran à droite) */
+.nav-links {
+  position: fixed;
+  top: 0;
+  right: 0; /* ✅ ouverture depuis la droite */
+  width: 100%; /* occupe toute la largeur */
+  height: 100vh;
+  background: #004080;
+  transform: translateX(100%); /* caché à droite */
+  transition: transform 0.3s ease-in-out;
+  z-index: 3000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Menu visible quand on clique */
+.nav-links.show {
+  transform: translateX(0); /* ✅ glisse depuis la droite */
+}
+
+.nav-links li {
+  margin: 20px 0;
+}
+
+.nav-links a {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
