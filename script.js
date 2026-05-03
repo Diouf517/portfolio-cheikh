@@ -168,3 +168,20 @@ if (burger && navLinks) {
 .nav-links.show {
   transform: translateY(0);
 }
+const burger = document.querySelector('.burger');
+const navLinks = document.querySelector('.nav-links');
+
+if (burger && navLinks) {
+  burger.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+    burger.classList.toggle('open');
+  });
+
+  const links = navLinks.querySelectorAll('a');
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('show');
+      burger.classList.remove('open');
+    });
+  });
+}
