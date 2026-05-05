@@ -6,20 +6,6 @@ body {
   color: #333;
 }
 
-/* Bannière accueil */
-.hero {
-  position: relative;
-  background: url("assets/banner.png") no-repeat center center/cover;
-  color: #fff;
-  text-align: center;
-  height: 100vh; /* couvre tout l’écran */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 80px 40px; /* recule le contenu */
-}
-
 /* Overlay dégradé léger */
 .hero::before {
   content: "";
@@ -65,24 +51,6 @@ body {
   color: #fff;
 }
 
-/* Menu */
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  padding: 0;
-  margin-top: 30px;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav ul li a:hover {
-  text-decoration: underline;
-}
 
 /* ✅ Responsive */
 @media (max-width: 768px) {
@@ -294,37 +262,6 @@ nav ul li a {
   text-decoration: none;
   font-weight: 600;
 }
-
-/* ✅ Adaptation mobile */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column; /* menu vertical sur mobile */
-    align-items: center;
-    gap: 10px;
-  }
-
-  nav ul li a {
-    font-size: 16px;
-  }
-
-  main {
-    padding: 20px;
-  }
-
-  main h1 {
-    font-size: 24px;
-  }
-
-  main p {
-    font-size: 16px;
-    text-align: left; /* plus lisible sur petit écran */
-  }
-
-  .avatar {
-    width: 120px;
-    border-width: 3px;
-  }
-}
 /* Fond spécifique */
 #skills-page {
   background: linear-gradient(to bottom, #fff, #e6f0ff);
@@ -391,20 +328,7 @@ nav ul li a {
   color: #555;
 }
 
-/* ✅ Adaptation mobile */
-@media (max-width: 600px) {
-  #skills-page main {
-    padding: 20px;
-  }
 
-  .skill-card h2 {
-    font-size: 18px;
-  }
-
-  .skill-card p {
-    font-size: 14px;
-  }
-}
 /* Effet interactif sur les cartes */
 .skill-card {
   background: #fff;
@@ -819,28 +743,7 @@ nav ul li a:hover {
   cursor: pointer;
 }
 
-/* Adaptation mobile */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    display: none; /* caché par défaut */
-    background: #004080;
-    padding: 10px 0;
-  }
 
-  nav ul.show {
-    display: flex; /* affiché quand on clique */
-  }
-
-  .menu-toggle {
-    display: block; /* bouton burger visible */
-  }
-
-  nav ul li {
-    margin: 10px 0;
-  }
-}
 /* Barre de navigation pour toutes les pages */
 #home-page nav,
 #about-page nav,
@@ -1398,15 +1301,6 @@ nav ul li a:hover {
   font-size: 1.2em;
   max-width: 600px;
 }
-/* Menu avec logo à gauche */
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px 30px;
-  background: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
 
 .nav-logo img {
   height: 40px;
@@ -1732,44 +1626,6 @@ nav {
     text-align: center;
   }
 
-/* Menu mobile */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: #111;
-    padding: 10px;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  nav.active .nav-links {
-    display: flex;
-  }
-
-  .nav-links li {
-    margin: 10px 0;
-  }
-}
-/* Bouton hamburger */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 22px;
-  cursor: pointer;
-}
-
-.menu-toggle span {
-  display: block;
-  height: 4px;
-  background: white;
-  border-radius: 2px;
-  transition: 0.3s;
-}
 
 /* Animation quand le menu est ouvert */
 .menu-toggle.open span:nth-child(1) {
@@ -1809,27 +1665,7 @@ nav {
     margin: 10px 0;
   }
 }
-/* Bouton hamburger */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 22px;
-  cursor: pointer;
-  position: fixed;   /* fixé en haut */
-  top: 15px;
-  right: 15px;
-  z-index: 2001;     /* toujours au-dessus */
-}
 
-.menu-toggle span {
-  display: block;
-  height: 4px;
-  background: white;
-  border-radius: 2px;
-  transition: 0.3s;
-}
 
 /* Menu mobile */
 @media (max-width: 768px) {
@@ -1873,45 +1709,7 @@ nav {
     right: 0;           /* glisse et couvre toute la partie droite */
   }
 }
-/* ✅ Menu mobile plein écran */
-@media (max-width: 768px) {
-  .burger {
-    display: block; /* bouton visible sur mobile */
-    position: relative;
-    z-index: 3001; /* au-dessus du menu */
-  }
 
-  .nav-links {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;        /* couvre toute la largeur */
-    height: 100vh;      /* couvre toute la hauteur */
-    background: #004080; /* fond bleu foncé */
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 25px;
-    transform: translateX(-100%); /* caché hors écran */
-    transition: transform 0.3s ease-in-out;
-    z-index: 3000; /* au-dessus de tout (avatar, textes, etc.) */
-  }
-
-  .nav-links.show {
-    transform: translateX(0); /* glisse et couvre tout l’écran */
-  }
-
-  .nav-links li {
-    margin: 15px 0;
-  }
-
-  .nav-links a {
-    color: #fff;
-    font-size: 20px;
-    font-weight: bold;
-    text-decoration: none;
-  }
-}
 /* ✅ Menu mobile plein écran */
 @media (max-width: 768px) {
   .burger {
@@ -2015,15 +1813,7 @@ nav {
   color: #f1c40f;
 }
 
-/* Bouton burger caché sur desktop */
-.burger {
-  display: none;
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 22px;
-  cursor: pointer;
-}
+
 
 /* Responsive mobile */
 @media (max-width: 768px) {
@@ -2052,18 +1842,7 @@ nav {
     margin: 15px 0;
   }
 }
-/* Bouton burger aligné à droite */
-.burger {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  font-size: 2rem;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  z-index: 4000;
-}
+
 
 /* Menu caché par défaut (hors écran à droite) */
 .nav-links {
