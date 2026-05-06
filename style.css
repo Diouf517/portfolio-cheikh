@@ -1974,3 +1974,47 @@ nav {
 .nav-links.show {
   transform: translateX(0); /* glisse depuis la droite */
 }
+/* Bouton burger */
+#menu-toggle {
+  font-size: 2rem;
+  cursor: pointer;
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  z-index: 1000;
+}
+
+/* Menu caché par défaut */
+#nav-links {
+  position: fixed;
+  top: 0;
+  right: -100%; /* caché hors écran */
+  width: 70%;
+  height: 100%;
+  background: #fff;
+  transition: right 0.3s ease;
+  z-index: 999;
+  padding-top: 60px; /* espace sous le bouton */
+}
+
+/* Quand la classe .show est activée */
+#nav-links.show {
+  right: 0; /* glisse depuis la droite */
+}
+
+/* Liens du menu */
+#nav-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#nav-links ul li {
+  margin: 20px 0;
+}
+
+#nav-links ul li a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #333;
+}
